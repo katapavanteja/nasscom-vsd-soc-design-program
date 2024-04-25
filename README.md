@@ -44,10 +44,14 @@ In general we write codes that need to be executed by the system, using coding l
 
 In real life we generally deal with Application Softwares(Apps) in order to communicate with the Hardware.But how it's done exactly?
 In between Application software and Hardware, there will be a software called System Software. The Applications enter into the System Software and will be converted into the Hardware understandable language i.e Binary Language.
+
 The System Software consists of different layers:
-(1) O.S : Other than the general operations like Handling I.O operations, Allocating Memory, Low level System Functions the O.S converts the Application software to respected C,C++,Java etc.. codes.
-(2) Compiler : The compiler takes output of O.S as input and converts the codes in C,C++,Java etc.. into Instruction set(.exe files). These instructions will be dependent on type of hardware used.
-(3) Assembler : Assembler converts the .exe files into binary language and provides it to the hardware, and hardware performs the respective operations.
+
+(1) **O.S** : Other than the general operations like Handling I.O operations, Allocating Memory, Low level System Functions the O.S converts the Application software to respected C,C++,Java etc.. codes.
+
+(2) **Compiler** : The compiler takes output of O.S as input and converts the codes in C,C++,Java etc.. into Instruction set(.exe files). These instructions will be dependent on type of hardware used.
+
+(3) **Assembler** : Assembler converts the .exe files into binary language and provides it to the hardware, and hardware performs the respective operations.
 
 
 ![Screenshot 2024-04-25 150500](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/3997bfe1-9b4a-4824-9377-2f0af6141092)
@@ -58,12 +62,38 @@ The System Software consists of different layers:
 ###  Introduction to all components of open-source digital asic design
 
 In order to design a Open Source Digital ASIC, we primarily need some components. Such as
+
 (1) RTL Designs
+
 (2) EDA Tools
+
 (3) PDK Data
+
 There are some open sources to get these required components. 
+
 For example, In case of RTL Designs we have librecores.org , opencores.org , github.com etc...
+
 In case of EDA Tools we have Qflow , OpenRoad , OpenLane  etc...
+
 In case of PDK Data, Recently in 2020 Google collabarated with SkyWater Technology and made **FOSS 130nm Production PDK** OpenSource.
+
+
+
+What are RTL Designs?
+
+RTL(Register-Transfer-Level) design is a crucial step in the VLSI design flow, which involves the creation of electronic circuits using integrated circuits (ICs). It involves the specification of a digital circuit in terms of the flow of digital signals between hardware registers, and the logical operations performed on those signals.
+
+What are EDA Tools?
+
+EDA(Electronic Design Automation) Tools are used to design and verify the functionality of an Integrated Circuit to ensure it deliver's the required performance and density.
+
+What is PDK Data?
+
+PDK(Process Design Kit) is a collection of files used to model a fabrication process for EDA Tools used in the design of an IC.The collection consists of
+
+- Process Design Rules : DRC , LVS , PEX
+- Device Models
+- Digital Standard Cell Libraries
+- I/O Libraries etc....
 
 
