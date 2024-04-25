@@ -39,3 +39,11 @@ In general we write codes that need to be executed by the system, using coding l
 
 ### From Software Applications to Hardware
 
+In real life we generally deal with Application Softwares(Apps) in order to communicate with the Hardware.But how it's done exactly?
+In between Application software and Hardware, there will be a software called System Software. The Applications enter into the System Software and will be converted into the Hardware understandable language i.e Binary Language.
+The System Software consists of different layers:
+(1) O.S : Other than the general operations like Handling I.O operations, Allocating Memory, Low level System Functions the O.S converts the Application software to respected C,C++,Java etc.. codes.
+(2) Compiler : The compiler takes output of O.S as input and converts the codes in C,C++,Java etc.. into Instruction set(.exe files). These instructions will be dependent on type of hardware used.
+(3) Assembler : Assembler converts the .exe files into binary language and provides it to the hardware, and hardware performs the respective operations.
+
+
