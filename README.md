@@ -8,3 +8,13 @@
 ###   Introduction to QFN-48 Package, chip, pads, core, die and IPs
 **Aurdino Board**: The image below is an Aurdino Microcontroller Board. Here we focus more on the encircled area, which contains the 'Microprocessor',that we will be designing from abstract level till fabrication level by using RTL to GDS flow
 
+![Screenshot 2024-04-25 120653](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/c8ff1aa9-59fb-4053-a00a-d7378a40045f)
+
+While we cosider the chip, there are 3 main components:
+
+(1) Pads : Through these pads signals can travel into the chip from external sources and viceversa.
+
+(2) Die : It is the whole area of the chip that will be manufactured on the silicon wafer.
+
+(3) Core : It is the area where our entire logic will be implemented.
+
