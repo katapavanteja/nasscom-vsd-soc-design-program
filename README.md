@@ -5,6 +5,8 @@
        - [Introduction to QFN-48 Package, chip, pads, core, die and IPs](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#introduction-to-qfn-48-package-chip-pads-core-die-and-ips)
        - [Introduction to RISC-V](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#introduction-to-risc-v)
        - [From Software Applications to Hardware](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#from-software-applications-to-hardware)
+    - [SOC Design and OpenLane](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#soc-design-and-openlane)
+       - [Introduction to all components of open-source digital asic design](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#introduction-to-all-components-of-open-source-digital-asic-design)
 # Sky130 Day 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK
 ##  How to talk to computers
 ###   Introduction to QFN-48 Package, chip, pads, core, die and IPs
@@ -37,6 +39,7 @@ In general we write codes that need to be executed by the system, using coding l
 
 ![Screenshot 2024-04-25 125225](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/5c651754-2931-4f70-9c35-5b9ef0b5f841)
 
+
 ### From Software Applications to Hardware
 
 In real life we generally deal with Application Softwares(Apps) in order to communicate with the Hardware.But how it's done exactly?
@@ -45,5 +48,22 @@ The System Software consists of different layers:
 (1) O.S : Other than the general operations like Handling I.O operations, Allocating Memory, Low level System Functions the O.S converts the Application software to respected C,C++,Java etc.. codes.
 (2) Compiler : The compiler takes output of O.S as input and converts the codes in C,C++,Java etc.. into Instruction set(.exe files). These instructions will be dependent on type of hardware used.
 (3) Assembler : Assembler converts the .exe files into binary language and provides it to the hardware, and hardware performs the respective operations.
+
+
+![Screenshot 2024-04-25 150500](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/3997bfe1-9b4a-4824-9377-2f0af6141092)
+
+
+## SOC Design and OpenLane
+
+###  Introduction to all components of open-source digital asic design
+
+In order to design a Open Source Digital ASIC, we primarily need some components. Such as
+(1) RTL Designs
+(2) EDA Tools
+(3) PDK Data
+There are some open sources to get these required components. 
+For example, In case of RTL Designs we have librecores.org , opencores.org , github.com etc...
+In case of EDA Tools we have Qflow , OpenRoad , OpenLane  etc...
+In case of PDK Data, Recently in 2020 Google collabarated with SkyWater Technology and made **FOSS 130nm Production PDK** OpenSource.
 
 
