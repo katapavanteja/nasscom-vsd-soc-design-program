@@ -7,6 +7,7 @@
        - [From Software Applications to Hardware](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#from-software-applications-to-hardware)
     - [SOC Design and OpenLane](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#soc-design-and-openlane)
        - [Introduction to all components of open-source digital asic design](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#introduction-to-all-components-of-open-source-digital-asic-design)
+       - [Simplified RTL2GDS Flow](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#simplified-rtl2gds-flow)
 # Sky130 Day 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK
 ##  How to talk to computers
 ###   Introduction to QFN-48 Package, chip, pads, core, die and IPs
@@ -77,7 +78,7 @@ In case of EDA Tools we have Qflow , OpenRoad , OpenLane  etc...
 
 In case of PDK Data, Recently in 2020 Google collabarated with SkyWater Technology and made **FOSS 130nm Production PDK** OpenSource.
 
-
+![Screenshot 2024-04-25 165455](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/3228ec00-ec38-422d-a882-110461e0e3fe)
 
 What are RTL Designs?
 
@@ -95,5 +96,12 @@ PDK(Process Design Kit) is a collection of files used to model a fabrication pro
 - Device Models
 - Digital Standard Cell Libraries
 - I/O Libraries etc....
+
+
+### Simplified RTL2GDS Flow
+
+
+
+
 
 
