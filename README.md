@@ -166,12 +166,14 @@ OpenLane is started as an Open Source Flow for a true Open Source Tape-out exper
 
 The Strive SOC family of several members and the list is given below
 
+![Screenshot 2024-04-26 184224](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/8c070b83-410e-4183-ac79-d993d251a588)
 
 The main goal of OpenLane is to "Produce a clean GDS file with no human intervention with no LVS,DRC,Timing violations. It is majorly tuned for Skywater 130nm OpenPDK but also supports XFab180 and GF130G. It is functional out of the box.It can be used Harden Macros and chips. It has two modes of operation , autonomous and interactive. It has a feauture called Design Space Exploration which helps in finding the best set of flow configurations.Presently it also has large no.of design examples nearly 43 and more will be added soon.
 
 
 ### Introduction to OpenLANE detailed ASIC design flow
 
+![Screenshot 2024-04-26 185534](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/6a21e3f7-a4e8-42c7-a1e8-748de6afa021)
 
 The image shows the OpenLane detailed ASIC Design Flow.
 
