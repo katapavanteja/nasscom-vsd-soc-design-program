@@ -102,6 +102,26 @@ PDK(Process Design Kit) is a collection of files used to model a fabrication pro
 
 The simplified RTL to GDS Flow starts with an RTL file. After going through some set of stages we will get the output as a GDS file, which can be readily sent to foundry for fabrication. The steps involved in the RTL2GDS Flow is of following:
 
+![Screenshot 2024-04-26 083825](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/7b2892cd-4de4-4453-b012-96f7bb6d6830)
+
+(1) **synthesis** : 
+- In synthesis stage RTL file will be converted into a circuit by using the components from the Standard Cell Library.
+- The cells in the Standard Cell Library are called Standard Cells and they have the regular layout of same height but different widths.
+- Each cell has different models based on Electrical,HDL,Spice,Layout(Abstract and Detailed) etc....
+
+
+
+ (2) **Floor Planning** & **Power Planning** :
+ - Floor Planning is a stage where the position of the components on the chip will be decided by keeping the area of the chip as minimal as possible by following a set of rules.
+ - During the Floor Planning Stage itself the position of I/O pins,ports,pads will be determined.
+
+
+
+ - In Power Planning stage the Power supply network i.e VDD & GND of the chip will be laid out. During Power PLanning 3 components Power Rings , Power Straps , Power Pads will be laid out.
+ - For Power Network Top Metal Layers will be used because the Power Network should have minimum delay as possible and the top layers of metal will have the low resistance, So they are used.
+
+
+
 
 
 
