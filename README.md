@@ -109,19 +109,17 @@ The simplified RTL to GDS Flow starts with an RTL file. After going through some
 - The cells in the Standard Cell Library are called Standard Cells and they have the regular layout of same height but different widths.
 - Each cell has different models based on Electrical,HDL,Spice,Layout(Abstract and Detailed) etc....
 
-![Screenshot 2024-04-26 085030](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/8d3f2901-254b-492a-a6ca-b362e3c9bf07)
+
 
 
  (2) **Floor Planning** & **Power Planning** :
  - Floor Planning is a stage where the position of the components on the chip will be decided by keeping the area of the chip as minimal as possible by following a set of rules.
  - During the Floor Planning Stage itself the position of I/O pins,ports,pads will be determined.
 
-![Screenshot 2024-04-26 090146](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/63484e17-0084-4264-bb77-221976475ded)
 
  - In Power Planning stage the Power supply network i.e VDD & GND of the chip will be laid out. During Power PLanning 3 components Power Rings , Power Straps , Power Pads will be laid out.
  - For Power Network Top Metal Layers will be used because the Power Network should have minimum delay as possible and the top layers of metal will have the low resistance, So they are used.
 
-![Screenshot 2024-04-26 090938](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/d318537e-473e-41ce-9d68-8978ffdbf775)
 
 (3) **Placement** :
 - In Placement stage the components are placed within the areas planned during the FloorPlanning Stage.
@@ -129,7 +127,6 @@ The simplified RTL to GDS Flow starts with an RTL file. After going through some
 - Placement will be performed in 2 stages. They are Global Placement and Detailed Placement.
 - During Global Placement the Standard cells may overlap and does not follow the Placement Rules.
 - In Detailed Placement every standard cell will be placed in its optimal position by following the Placement rules.
-
 
 
 (4) **CTS**(Clock Tree Synthesis) :
