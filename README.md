@@ -109,21 +109,57 @@ The simplified RTL to GDS Flow starts with an RTL file. After going through some
 - The cells in the Standard Cell Library are called Standard Cells and they have the regular layout of same height but different widths.
 - Each cell has different models based on Electrical,HDL,Spice,Layout(Abstract and Detailed) etc....
 
+![Screenshot 2024-04-26 085030](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/8d3f2901-254b-492a-a6ca-b362e3c9bf07)
 
 
  (2) **Floor Planning** & **Power Planning** :
  - Floor Planning is a stage where the position of the components on the chip will be decided by keeping the area of the chip as minimal as possible by following a set of rules.
  - During the Floor Planning Stage itself the position of I/O pins,ports,pads will be determined.
 
-
+![Screenshot 2024-04-26 090146](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/63484e17-0084-4264-bb77-221976475ded)
 
  - In Power Planning stage the Power supply network i.e VDD & GND of the chip will be laid out. During Power PLanning 3 components Power Rings , Power Straps , Power Pads will be laid out.
  - For Power Network Top Metal Layers will be used because the Power Network should have minimum delay as possible and the top layers of metal will have the low resistance, So they are used.
 
+![Screenshot 2024-04-26 090938](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/d318537e-473e-41ce-9d68-8978ffdbf775)
+
+(3) **Placement** :
+- In Placement stage the components are placed within the areas planned during the FloorPlanning Stage.
+- Along with them Standard Cells that are required in the design are also placed within the cell boundaries.
+- Placement will be performed in 2 stages. They are Global Placement and Detailed Placement.
+- During Global Placement the Standard cells may overlap and does not follow the Placement Rules.
+- In Detailed Placement every standard cell will be placed in its optimal position by following the Placement rules.
 
 
 
+(4) **CTS**(Clock Tree Synthesis) :
+- Before Performing Routing of the signals, we should perform Clock Routing.
+- While Routing the clock tha major problem is CLock Skew.
+- Clock Skew is the difference in time taken for the clock to reach two different destinations in the design.
+- In order to eliminate the clock skew, we should deploy the technique called **Symmetric Tree Structure**.
+- There are different types of Symmetric Tree Structures. They are H-tree,I-tree,X-tree etc...
 
+
+
+(5) **Routing** :
+- Afetr the clock routing is done, now signals must be routed.
+- Router uses the remaining metal layers and makes conections in the design.
+- Routing will be carried out in 2 stages.They are Global Routing and Detailed Routinng.
+- In the stage of Global Routing, the tool generates a Routing guide by following the instructions given in the PDK.
+- In the stage of Detailed Routing, actual routing will be done according to the guide generated in the Global Routing Stage.
+
+
+
+(6) **Sign-off** :
+- After Routing is done, the chip will be considered as completed and during Sign-off stage different types of checks will be performed.
+- Physical Verification Checks : Design Rule Check(DRC) , Layout Vs Schematic(LVS)
+- In DRC, the chip will be verified for the violations in the Design Rules provided by the PDK.
+- In LVS, the chip will be checked for the functionality whether it matches to the gate level netlist functinality.
+- Timing Checks : Static Timing Analysis(STA)
+- During STA, the design is checked for Timing violations.
+  
+
+   
 
 
 
