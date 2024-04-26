@@ -8,6 +8,7 @@
     - [SOC Design and OpenLane](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#soc-design-and-openlane)
        - [Introduction to all components of open-source digital asic design](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#introduction-to-all-components-of-open-source-digital-asic-design)
        - [Simplified RTL2GDS Flow](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#simplified-rtl2gds-flow)
+       - [Introduction to OpenLANE and Strive chipsets](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#introduction-to-openlane-and-strive-chipsets)
 # Sky130 Day 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK
 ##  How to talk to computers
 ###   Introduction to QFN-48 Package, chip, pads, core, die and IPs
@@ -109,16 +110,18 @@ The simplified RTL to GDS Flow starts with an RTL file. After going through some
 - The cells in the Standard Cell Library are called Standard Cells and they have the regular layout of same height but different widths.
 - Each cell has different models based on Electrical,HDL,Spice,Layout(Abstract and Detailed) etc....
 
-
+![Screenshot 2024-04-26 102201](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/71a3393c-2f6e-4b22-8b72-b26eaa22ff83)
 
  (2) **Floor Planning** & **Power Planning** :
  - Floor Planning is a stage where the position of the components on the chip will be decided by keeping the area of the chip as minimal as possible by following a set of rules.
  - During the Floor Planning Stage itself the position of I/O pins,ports,pads will be determined.
 
+![Screenshot 2024-04-26 102220](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/85b4aae4-3ef6-473d-b638-692f5aace919)
 
  - In Power Planning stage the Power supply network i.e VDD & GND of the chip will be laid out. During Power PLanning 3 components Power Rings , Power Straps , Power Pads will be laid out.
  - For Power Network Top Metal Layers will be used because the Power Network should have minimum delay as possible and the top layers of metal will have the low resistance, So they are used.
 
+![Screenshot 2024-04-26 102235](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/1aa9278c-331d-474a-8d60-74b9da1cb288)
 
 (3) **Placement** :
 - In Placement stage the components are placed within the areas planned during the FloorPlanning Stage.
@@ -127,6 +130,7 @@ The simplified RTL to GDS Flow starts with an RTL file. After going through some
 - During Global Placement the Standard cells may overlap and does not follow the Placement Rules.
 - In Detailed Placement every standard cell will be placed in its optimal position by following the Placement rules.
 
+![Screenshot 2024-04-26 102251](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/861d2368-0a25-47d4-a092-67711d3afe1e)
 
 (4) **CTS**(Clock Tree Synthesis) :
 - Before Performing Routing of the signals, we should perform Clock Routing.
@@ -135,7 +139,7 @@ The simplified RTL to GDS Flow starts with an RTL file. After going through some
 - In order to eliminate the clock skew, we should deploy the technique called **Symmetric Tree Structure**.
 - There are different types of Symmetric Tree Structures. They are H-tree,I-tree,X-tree etc...
 
-
+![Screenshot 2024-04-26 102308](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/3d64c44e-26cb-4c3e-af1f-e1e09d261e2d)
 
 (5) **Routing** :
 - Afetr the clock routing is done, now signals must be routed.
@@ -144,7 +148,7 @@ The simplified RTL to GDS Flow starts with an RTL file. After going through some
 - In the stage of Global Routing, the tool generates a Routing guide by following the instructions given in the PDK.
 - In the stage of Detailed Routing, actual routing will be done according to the guide generated in the Global Routing Stage.
 
-
+![Screenshot 2024-04-26 102325](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/4b8970a1-dfda-454c-a0a8-c789ef0963a2)
 
 (6) **Sign-off** :
 - After Routing is done, the chip will be considered as completed and during Sign-off stage different types of checks will be performed.
@@ -153,6 +157,12 @@ The simplified RTL to GDS Flow starts with an RTL file. After going through some
 - In LVS, the chip will be checked for the functionality whether it matches to the gate level netlist functinality.
 - Timing Checks : Static Timing Analysis(STA)
 - During STA, the design is checked for Timing violations.
+
+
+### Introduction to OpenLANE and Strive chipsets
+
+
+  
   
 
    
