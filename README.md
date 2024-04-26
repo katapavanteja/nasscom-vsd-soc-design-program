@@ -100,6 +100,10 @@ PDK(Process Design Kit) is a collection of files used to model a fabrication pro
 
 ### Simplified RTL2GDS Flow
 
+The simplified RTL to GDS Flow starts with an RTL file. After going through some set of stages we will get the output as a GDS file, which can be readily sent to foundry for fabrication. The steps involved in the RTL2GDS Flow is of following:
+
+
+
 
 
 
