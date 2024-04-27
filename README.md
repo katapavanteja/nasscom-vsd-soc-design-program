@@ -16,7 +16,7 @@
 
 **Aurdino Board**: The image below is an Aurdino Microcontroller Board. Here we focus more on the encircled area, which contains the 'Microprocessor',that we will be designing from abstract level till fabrication level by using RTL to GDS flow
 
-![Screenshot 2024-04-25 120653](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/c8ff1aa9-59fb-4053-a00a-d7378a40045f)
+![Screenshot 2024-04-27 184745](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/76f788e6-5e83-410c-becc-cf496a400188)
 
 While we cosider the chip, there are 3 main components:
 
