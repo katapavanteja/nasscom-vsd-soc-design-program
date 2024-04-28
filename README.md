@@ -10,6 +10,9 @@
        - [Simplified RTL2GDS Flow](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#simplified-rtl2gds-flow)
        - [Introduction to OpenLANE and Strive chipsets](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#introduction-to-openlane-and-strive-chipsets)
        - [Introduction to OpenLANE detailed ASIC design flow](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#introduction-to-openlane-detailed-asic-design-flow)
+    - [Get familiar to open-source EDA tools](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#get-familiar-to-open-source-eda-tools)
+       - [OpenLane Directory Structure](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#openlane-directory-structure)
+       - [Design Preparation Setup](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#design-preparation-setup)
 # Inception of open-source EDA, OpenLANE and Sky130 PDK
 ##  How to talk to computers
 ###   Introduction to QFN-48 Package, chip, pads, core, die and IPs
@@ -217,7 +220,24 @@ There are two solutions for this problem
  And at the end, we perform Physical Verification. Which includes DRC(Design Rule Checking) , LVS(Layout Vs Schematic). Along with the P.V we also performs STA to check for timing violations in the design.
  - MAGIC is used for DRC and SPICE Extraction from Layout.
  - MAGIC and Netgen are used for LVS by comparing Extracted SPICE by MAGIC and Verilog Netlist.
- 
+
+
+## Get familiar to open-source EDA tools
+
+### OpenLane Directory Structure
+
+ In order to access the OpenLane tool, we will be needing some basic linux commands.They are listed below 
+ - pwd : It displays the present working directory and its path.
+ - cd : Using this command we can move in both ways in the directory tree.
+ - ls : It lists all the sub-directories and files present in the current directory.
+ - mkdir : Using this command, we can create a new directory.
+ - rmdir : Using his command, we can delete an existing directory.
+ - rm : This command is used to delete the files.
+ - help : using this command we can know the working of any command.
+ - clear : This command clears the terminal.
+
+
+### Design Preparation Setup
 
 
   
