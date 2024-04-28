@@ -175,9 +175,54 @@ The main goal of OpenLane is to "Produce a clean GDS file with no human interven
 
 ![Screenshot 2024-04-26 185534](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/6a21e3f7-a4e8-42c7-a1e8-748de6afa021)
 
-The image shows the OpenLane detailed ASIC Design Flow.
+The image shows the OpenLane detailed ASIC Design Flow.The flow starts with Design RTL, It goes through RTL synthesis by Yosys and abc giving an optimised gate level netlist. Now we perform STA on the optimised netlist inorder to check for Timing violations. After STA we perofrm DFT and this step is optional and for this we use FAULT tool.
+
+Fault(for DFT) : 
+- Scan Insertion
+- Automatic Test Pattern Generation(ATPG)
+- Test Pattern Compaction
+- Fault coverage
+- Fault Simulation
+
+![Screenshot 2024-04-28 090349](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/316fe057-88ce-4bf3-9f2a-fb9f42b03756)
+
+ After performing DFT next comes Physical Implementation.It is also called as Automated PnR(Place and Route) and for this we use OpenRoad.
+
+ OpenRoad(for Physical Implementation) :
+ - Floor/Power Planning
+ - End Decoupling Capacitors and Tap Cells Insertion
+ - Placement: Global and Detailed
+ - Post placement optimization
+ - Clock Tree Synthesis
+ - Routing: Global and Detailed
+
+ During PnR for every change in the design, we should check for LEC(Logic Equivalance Checking). LEC is used to confirm that the function did not change after modifying the netlist and also during physical implementation we have a important step called "Fake Antenna Diodes Insertion Script".
+
+Dealing with Antenna Rule violations : When a metal wire segment is fabricated, it can act as an antenna.
+- Reactive ion etching causes charge to accumilate on the wire.
+- Transistor gates can be damaged during fabrication.
+
+There are two solutions for this problem
+- Bridging attaches a higher layer intermediary. It requires Router awareness.
+
+![Screenshot 2024-04-28 093445](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/fddd163a-493a-4799-a659-4d20789d272b)
+
+- Add antenna diode cell to leak away the charges. Antenna diodes are provided by the SCL. For this we took a preventive approach.
+  - Add a Fake antenna didoe next to every cell input after placement.
+  - Run the Antenna Checker(Magic) on the routed layout.
+  - If the checker reports violation on the cell input pin, replace the fake diode cell by a real one 
+
+ ![Screenshot 2024-04-28 094148](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/aa0d19c1-1e9f-47a2-8e16-5e9e4a5b8f3d)
+
+ And at the end, we perform Physical Verification. Which includes DRC(Design Rule Checking) , LVS(Layout Vs Schematic). Along with the P.V we also performs STA to check for timing violations in the design.
+ - MAGIC is used for DRC and SPICE Extraction from Layout.
+ - MAGIC and Netgen are used for LVS by comparing Extracted SPICE by MAGIC and Verilog Netlist.
+ 
+
 
   
+
+ 
   
 
    
