@@ -14,6 +14,10 @@
        - [OpenLane Directory Structure](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#openlane-directory-structure)
        - [Design Preparation Setup](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#design-preparation-setup)
        - [Review files after design prep and run synthesis](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#review-files-after-design-prep-and-run-synthesis)
+       - [Steps to charactirise Synthesis results](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#steps-to-charactirise-synthesis-results)
+2) Day-2: [Good FloorPlan Vs Bad FloorPlan and Introduction to Library Cells](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#good-floorplan-vs-bad-floorplan-and-introduction-to-library-cells)
+    - [Chip FloorPlanning Considerations](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#chip-floorplanning-considerations)
+       - [Utilization Factor and Aspect Ratio](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#utilization-factor-and-aspect-ratio)
 # Inception of open-source EDA, OpenLANE and Sky130 PDK
 ##  How to talk to computers
 ###   Introduction to QFN-48 Package, chip, pads, core, die and IPs
@@ -267,6 +271,32 @@ Initially every directory will be empty because we haven't performed any operati
 Now, it's time to proceed with the first step in the project. we need to perform Synthesis on the design. For this we need to use the command **`run_synthesis`**.Tool will take some time to perform synthesis, when completed it displays the **Synthesis was successful** message.
 
 ![synthesis_successful](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/7e6d7b96-a567-4089-b655-681cd4508fa0)
+
+
+### Steps to charactirise Synthesis results
+
+Now we need to find out the flipflop percentage in total cells. For this we use reports from Synthesis stage.
+
+![flopcount](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/48d87542-8838-4d13-9b3c-6979e6f42983)
+
+
+In the above image,we can see that the total no.of cells used in the design are 14876 and the count of D-flipflops in the design are 1613. So, the flipflop percentage is calculated as
+
+**Flop Ratio = ((no.of flipflops) / (Total no.of cells))*100 = (1613/14876)*100 = 10.84%**
+
+Before Performing Synthesis the reports directory was empty. After Synthesis the reports that are generated during synthesis will be stored in the reports directory.
+
+![synthesis_reports](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/881d4439-a191-4c1c-a781-2e343d0b134e)
+
+
+
+
+# Good FloorPlan Vs Bad FloorPlan and Introduction to Library Cells
+
+## Chip FloorPlanning Considerations
+
+### Utilization Factor and Aspect Ratio
+
 
 
 
