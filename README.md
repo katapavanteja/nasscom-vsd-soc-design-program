@@ -253,6 +253,23 @@ At the end of the terminal we can see that **Preparation is complete**.
 
 ### Review files after design prep and run synthesis
 
+After Preparation is done a directory with current date will be created in the runs folder.And in that directory all the directorys that are needed to store the results , reports etc.. will be created.
+
+![Screenshot from 2024-04-29 12-08-25](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/9f13846c-4f11-4eef-9ff0-8342675edeca)
+
+Initially every directory will be empty because we haven't performed any operations on the design.But we will have a direcrory named tmp and it contains different types of files.One of the files will be "merged.lef" file, it contains metal layer level and cell level information.
+
+![Screenshot from 2024-04-29 12-15-29](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/a1ab07ee-58cd-4f00-83dc-9ee39c0e03f8)
+
+
+![Screenshot from 2024-04-29 12-18-08](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/baaf829a-0cce-4869-91b2-1b8f3558df47)
+
+Now, it's time to proceed with the first step in the project. we need to perform Synthesis on the design. For this we need to use the command **`run_synthesis`**.Tool will take some time to perform synthesis, when completed it displays the **Synthesis was successful** message.
+
+![synthesis_successful](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/7e6d7b96-a567-4089-b655-681cd4508fa0)
+
+
+
 
 
 
