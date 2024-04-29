@@ -13,6 +13,7 @@
     - [Get familiar to open-source EDA tools](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#get-familiar-to-open-source-eda-tools)
        - [OpenLane Directory Structure](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#openlane-directory-structure)
        - [Design Preparation Setup](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#design-preparation-setup)
+       - [Review files after design prep and run synthesis](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#review-files-after-design-prep-and-run-synthesis)
 # Inception of open-source EDA, OpenLANE and Sky130 PDK
 ##  How to talk to computers
 ###   Introduction to QFN-48 Package, chip, pads, core, die and IPs
@@ -238,6 +239,22 @@ There are two solutions for this problem
 
 
 ### Design Preparation Setup
+
+In order to enter into BASH, by being in OpenLane directory we should use a command called **`docker`**. By using docker command we will enter into the Bash. After entering into bash we have to use the script flow.tcl, because this .tcl file contains the steps that need to be executed in the OpenLane and along with the tcl file we need to use -interactive switch in order to perform step by step process. If not used interactive switch the whole flow i.e RTL to GDS will be executed once and the final report will be given. The command that we should use for this is **`./flow.tcl -interactive`**.Now OpenLane is opened and we can observe the change in prompt and now we have to input packages required to run the flow and for this we use the command **`package require openlane 0.9`**.
+
+![Screenshot from 2024-04-29 09-36-22](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/89083deb-49db-4be9-8203-658f1f466c6c)
+
+Now we need to select the design on which we are going to perform RTL to GDS flow, we will be having 30 to 40 designs that are pre-built in the design folder in openlane and we will be selecting "picorv32a.v" design for this project.Now in order to perform synthesis(first stage of the project) on this design, first we need to setup the design and for that the command will be **`prep -design picorv32a`**.
+
+![design_prep_comp](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/dc62fda2-9b51-4544-a44f-f000f434ef34)
+ 
+At the end of the terminal we can see that **Preparation is complete**.
+
+
+### Review files after design prep and run synthesis
+
+
+
 
 
   
