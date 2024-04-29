@@ -19,6 +19,10 @@
     - [Chip FloorPlanning Considerations](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#chip-floorplanning-considerations)
        - [Utilization Factor and Aspect Ratio](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#utilization-factor-and-aspect-ratio)
        - [Concept of pre-placed cells](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#concept-of-pre-placed-cells)
+       - [De-coupling Capacitors](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#de-coupling-capacitors)
+       - [Power Planning](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#power-planning)
+       - [Pin placement and logical cell placement blockage](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#pin-placement-and-logical-cell-placement-blockage)
+       - [Steps to run floorplan using OpenLANE](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#steps-to-run-floorplan-using-openlane)
 # Inception of open-source EDA, OpenLANE and Sky130 PDK
 ##  How to talk to computers
 ###   Introduction to QFN-48 Package, chip, pads, core, die and IPs
@@ -351,7 +355,72 @@ In this case , when calculated
 
 ### Concept of pre-placed cells
 
+The concept of pre-placing cells is nothing but reusing already designed blocks by not designing them again and again. The most commonly used pre-placed blocks are Memory , comparators , Mux etc.. , These blocks can be called as Macros (or) I.P's .We need to place these macros very carefully in such a way that if these blocks are more connected to input pins, then we should place these close to those input pins. These should be placed in a way such that the wiring length should be decreased.
 
+The term Pre-placed refers to "Placing those blocks prior to placement stage that is in Floorplan stage. After placing those blocks in Floorplan stage we need to define some placement blockages in order to avoid Placing of other standard cell near to those blocks by the tool during placement stage. By using this pre-placed cells the Time-to-Market can be reduced.
+
+![Screenshot 2024-04-29 173001](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/15833499-734d-4f4f-96b7-e87b51bacfec)
+
+
+### De-coupling Capacitors
+
+Generally these pre-placed blocks will be high-power draining blocks. In some cases, the power they recieve from the power source will not be sufficient for them to perform switching i.e the signal will not be in the range of its noise margin because there will be a voltage drop in the inter-connecting wires. In this case, the De-coupling Capacitors comes into the picture. 
+
+![Screenshot 2024-04-29 180454](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/16730df5-6ed5-4278-84e1-a73b082a9acc)
+
+These De-cap cells will be placed near to the blocks that will drain high power. When there is no switching is being performed the De-cap cell will be connected to power source and gets charged to its high level and when the switching is being performed the De-cap cells will be connected to the blocks and the power required for the block will be supplied by the De-cap cell, and when ever the switching stops again the De-cap cell will start to getting charged. This is the working of De-cap cells and these cells plays a crucial role in the circuit design.
+
+![Screenshot 2024-04-29 180434](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/ca65ac68-b354-4a3b-acd3-ebd001c9d077)
+
+
+### Power Planning
+
+In the previous section we used De-cap cells to manage power for different blocks.But Decap cells have some limitations such as Leakage power and increase in the area of chip. To overcome these we use a technique called Powerplanning. In some areas of the chip when there is more  switching happening, two tyoes of phenomena can occur
+- Voltage drop
+- Ground bounce
+
+![Screenshot 2024-04-29 220148](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/e35764ce-4a3d-4348-829b-97467e7ae641)
+
+**Voltage drop** : When a group of cells are simultaneously switching from 0 to 1, then every cell needs the power and In case the power is supplying from one source, there may occur the shotage of power and drop in the input voltage happens at that place. This is called as "Voltage Drop". The problem occurs only when the voltage level goes below the noise margin.
+
+![Screenshot 2024-04-29 220418](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/f1279b81-fd52-4693-aa83-2e871c70b96c)
+
+**Ground Bounce** : When a group of cells are simultaneoisly switching from 1 to 0, then every cell dumps the power to th ground simultaneously to the same ground pin. In this case the ground instead of being at 0 experiences a short rise in the voltage and this is called as "Ground Bounce".The problem occurs only when the voltage level goes above the noise margin.
+
+![Screenshot 2024-04-29 220249](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/239dc9f3-88d5-46d1-ab4d-710e87686f8e)
+
+In order to avoid these abnormalities, a technique called Power Planning is used. In this technique two different Power mashes are used, one for Vdd and another one for Ground.These meshes are prepared by using top two metal layers because they should have less voltage drop. These meshes will be spread across the design and are connected to multiple sources of Vdd and Ground.
+
+![Screenshot 2024-04-29 220510](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/edd194dd-6580-4ac8-a163-a0438714cb30)
+
+With this technique whenever a cell needs power to switch from 0 to 1, it takes from nearest Vdd layer and if a cell needs to drain the power it will drain it to the nearest Ground Layer.
+
+![Screenshot 2024-04-29 220626](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/7e67b60d-cc66-46d2-bb9f-60fd331c0fea)
+
+
+### Pin placement and logical cell placement blockage
+
+Pin Placement is one of the crucial step in the design process. Bad pin placement results increase in the length of wire used for connectivity, which inturn results in some adverse affects.
+Pins should be placed in such a way that the required for connecting them to the blocks should be as less as possible. For example if an input pin is driving two blocks then that pin should be placed near to those two blocks.
+
+Let's consider the below design
+
+![Screenshot 2024-04-29 224141](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/c63b1efc-c7b0-4cdb-b453-cb88b30b8a3e)
+
+For the above design the effective pin placement will look like as follows
+
+![Screenshot 2024-04-29 224300](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/38417a02-524d-4aef-b54d-d9f67a246df1)
+
+In the above pin placement, we can observe two things 
+- The order of input pins and output pins is random. As already mentioned the pins should be placed based on the connectivity not based on the order.
+- The pins used for clock signals are larger in size when compared to pins used for signals, this is because clock is one of the important signal in the design and delays and voltage drops in the clock signal leads to failure of the chip. That is the reason why we use higher metal layers for routing the clock in the design.
+
+After finishing the pin placement, we should use placement blockages outside of the core area and inside of the die area inorder to avoid placement and routing tool using that space for placement and routing, because it is the area dedicated only for Pin Placement purpose.
+
+![Screenshot 2024-04-29 225000](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/428dda61-6e63-4c8a-b11f-51c5f7da5cb9)
+
+
+### Steps to run floorplan using OpenLANE
 
 
 
