@@ -28,6 +28,8 @@
     - [Library Binding and Placement](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#library-bindidng-and-placement)
        - [Netlist binding and initial place design](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#netlist-binding-and-initial-place-design)
        - [Optimize placement using estimated wire-length and capacitance](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#optimize-placement-using-estimated-wire-length-and-capacitance)
+       - [Congestion aware placement using replace](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#congestion-aware-placement-using-replace)
+    - [Cell Design and Characterization flows](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#cell-design-and-characterization-flows)
 # Inception of open-source EDA, OpenLANE and Sky130 PDK
 ##  How to talk to computers
 ###   Introduction to QFN-48 Package, chip, pads, core, die and IPs
@@ -498,7 +500,36 @@ For above example tool will place the blocks by using the estimated wire length 
 ![Screenshot 2024-04-30 154924](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/f60da452-6c6d-4304-8108-726e41852c30)
 
 
-### 
+### Congestion aware placement using replace
+
+
+After successful Floorplanning, the next step in the design process is Placement. Placement stage will consist of two stages 
+- Global Placement - In Global Placement stage tool decides the places for all standard cells in the design.
+- Detailed Placement - In Detailed Placement stage the tool places all the standard cells in their designated places and legalization of the Placement will be done. Legalization is nothing but making sure that standard cells are not overlapped on each other in the design and are placed with in the site rows of the design.
+
+In order to start the placement we need to use the command **`run_placement`**.
+
+After Placement is done to check whether the cells are placed correctly or not, we need to check GUI and that will be done using MAGIC tool with the following command
+
+**`magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def &`**
+
+![Screenshot from 2024-04-30 22-13-00](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/a5a4b928-7bff-4c9f-bef4-408367312c06)
+
+
+![Screenshot from 2024-04-30 22-14-10](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/9a284840-6402-40f6-aa1c-9c6c50cb1909)
+
+
+![Screenshot from 2024-04-30 22-15-57](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/378e46cd-3f9c-4176-8695-2a739af85bba)
+
+
+
+
+## Cell Design and Characterization flows
+
+
+
+
+
 
 
 
