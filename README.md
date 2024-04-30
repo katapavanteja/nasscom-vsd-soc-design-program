@@ -423,6 +423,11 @@ After finishing the pin placement, we should use placement blockages outside of 
 ### Steps to run floorplan using OpenLANE
 
 
+For Floorplan to run smoothly, as a designer we should take care of some switches, that makes changes to the floorplan when changed. For example Utilization factor and aspect ratio are also part of switches. Designer should cross check these switches before initializing floorplan whether they are alligned with the project or not. Below image shows different types of switches in floorplan stage.
+
+
+
+
 
 
 
