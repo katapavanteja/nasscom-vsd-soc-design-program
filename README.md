@@ -27,6 +27,7 @@
        - [Review Floorplan layout in magic](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#review-floorplan-layout-in-magic)
     - [Library Binding and Placement](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#library-bindidng-and-placement)
        - [Netlist binding and initial place design](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#netlist-binding-and-initial-place-design)
+       - [Optimize placement using estimated wire-length and capacitance](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#optimize-placement-using-estimated-wire-length-and-capacitance)
 # Inception of open-source EDA, OpenLANE and Sky130 PDK
 ##  How to talk to computers
 ###   Introduction to QFN-48 Package, chip, pads, core, die and IPs
@@ -490,8 +491,16 @@ In the above picture we have 3 different sets of same elements. The elements whi
 
 ### Optimize placement using estimated wire-length and capacitance
 
+During Placement we should definitely consider the estimated wire length and place the cells according to it. Wire length is estimated by calculating the distance from input source of those cells and the distance to the output sinks that are being driven by them. 
 
-### Final Placement Optimization
+For above example tool will place the blocks by using the estimated wire length as shown in the below figure
+
+![Screenshot 2024-04-30 154924](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/f60da452-6c6d-4304-8108-726e41852c30)
+
+
+### 
+
+
 
 
 
