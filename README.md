@@ -25,6 +25,8 @@
        - [Steps to run floorplan using OpenLANE](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#steps-to-run-floorplan-using-openlane)
        - [Review Floorplan files and steps to view floorplan](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#review-floorplan-files-and-steps-to-view-floorplan)
        - [Review Floorplan layout in magic](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#review-floorplan-layout-in-magic)
+    - [Library Binding and Placement](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#library-bindidng-and-placement)
+       - [Netlist binding and initial place design](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#netlist-binding-and-initial-place-design)
 # Inception of open-source EDA, OpenLANE and Sky130 PDK
 ##  How to talk to computers
 ###   Introduction to QFN-48 Package, chip, pads, core, die and IPs
@@ -469,6 +471,30 @@ In order to know the details of any cell in the design, just move the cursor to 
 
 
 ![Decap_cell](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/87d6e43b-79b7-4d1b-9368-73ce6702bf8c)
+
+
+
+## Library Bindidng and Placement
+
+### Netlist binding and initial place design
+
+In the netlist every element has its own shape, for example And gate has a different shape and or gate has a different shape. But in a library every element has only a square or rectangle shape. A Library consists of every elements that can be readily used and also the elements comes with their respective properties such as area, delay etc.. . We will have different versions of the same element with different properties.
+
+![Screenshot 2024-04-30 152912](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/f3aa46fa-675b-425a-b871-6073429312bd)
+
+
+![Screenshot 2024-04-30 152937](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/ed3e79b7-5bc0-4a50-a555-7622a1d3e5f0)
+
+In the above picture we have 3 different sets of same elements. The elements which are larger in size are faster but occupies larger area and the smaller set will occupy less area but are slower when compared to larger ones.
+
+
+### Optimize placement using estimated wire-length and capacitance
+
+
+### Final Placement Optimization
+
+
+
 
 
 
