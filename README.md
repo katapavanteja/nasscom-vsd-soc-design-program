@@ -32,6 +32,8 @@
 3) Day-3: [Design library cell using Magic Layout and ngspice characterization](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#design-library-cell-using-magic-layout-and-ngspice-characterization)
    - [Inception of Layout and CMOS fabrication process](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#inception-of-layout-and-cmos-fabrication-process)
       - [Lab steps to create std cell layout and extract spice netlist](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-steps-to-create-std-cell-layout-and-extract-spice-netlist)
+   - [Sky130 Tech File Labs](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#sky130-tech-file-labs)
+      - [
 
 # Inception of open-source EDA, OpenLANE and Sky130 PDK
 ##  How to talk to computers
@@ -546,6 +548,10 @@ Next we need to create a spice file using this extracted file to use within the 
 **`ext2spice cthresh 0 rthresh 0`**, this will not create any new file. 
 
 After that use command **`ext2spice`** , this will create a spice file in the vsdstdcelldesign directory.
+
+
+
+## Sky130 Tech File Labs
 
 
 
