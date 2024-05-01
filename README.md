@@ -29,7 +29,10 @@
        - [Netlist binding and initial place design](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#netlist-binding-and-initial-place-design)
        - [Optimize placement using estimated wire-length and capacitance](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#optimize-placement-using-estimated-wire-length-and-capacitance)
        - [Congestion aware placement using replace](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#congestion-aware-placement-using-replace)
-    - [Cell Design and Characterization flows](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#cell-design-and-characterization-flows)
+3) Day-3: [Design library cell using Magic Layout and ngspice characterization](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#design-library-cell-using-magic-layout-and-ngspice-characterization)
+   - [Inception of Layout and CMOS fabrication process](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#inception-of-layout-and-cmos-fabrication-process)
+      - [Lab steps to create std cell layout and extract spice netlist](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-steps-to-create-std-cell-layout-and-extract-spice-netlist)
+
 # Inception of open-source EDA, OpenLANE and Sky130 PDK
 ##  How to talk to computers
 ###   Introduction to QFN-48 Package, chip, pads, core, die and IPs
@@ -523,14 +526,26 @@ After Placement is done to check whether the cells are placed correctly or not, 
 
 
 
-
-## Cell Design and Characterization flows
-
+# Design library cell using Magic Layout and ngspice characterization
 
 
+## Inception of Layout and CMOS fabrication process
+
+
+### Lab steps to create std cell layout and extract spice netlist
+
+
+We need to extract the spice netlist from the given Inverter from MAGIC Tool inorder to spice simulation in ngspice tool.
+
+First we need to create an extraction file of the inverter. we can do this by using the command **`extract all`** in the tkcon window. This will create an extracted file in the vsdstdcelldesign directory.
 
 
 
+Next we need to create a spice file using this extracted file to use within the ngspice tool.For this the command will be
+
+**`ext2spice cthresh 0 rthresh 0`**, this will not create any new file. 
+
+After that use command **`ext2spice`** , this will create a spice file in the vsdstdcelldesign directory.
 
 
 
