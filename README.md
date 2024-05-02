@@ -589,6 +589,7 @@ From the plot that we got from ngspice, we need to characterize four parameters 
 - **Rise time** : It is the time taken for the output waveform to go to 80% of its max value from 20% of its max value.
 
   x0 = 6.16138e-09, y0 = 0.660007
+
   x0 = 6.20366e-09, y0 = 2.64009
 
   From the above values, Rise time = 0.0422 ns
@@ -596,19 +597,22 @@ From the plot that we got from ngspice, we need to characterize four parameters 
 - **Fall time** : It is the time taken for the output to fall from 80% of its max value to 20% of its max value.
 
   x0 = 8.04034e-09, y0 = 2.64003
-  x0 = 8.06818e-09, y0 = 0.659993
+
+   x0 = 8.06818e-09, y0 = 0.659993
 
     From the above values , Fall Time = 0.0278 ns
 
 - **Propogation Delay** : It is the time taken for the 50% of transition from 0 to 1 at the output for the 50% transistion from 1 to 0 at the input side.
 
   x0 = 2.18449e-09, y0 = 1.64994
+
   x0 = 2.15e-09, y0 = 1.65011
      From the above values , Prop Delay = 0.034 ns
 
 - **Cell Fall Delay** : It is the time taken for the 50% of transition from 1 to 0 at the output for the 50% transistion from 0 to 1 at the input side.
 
   x0 = 4.05432e-09, y0 = 1.65
+
   x0 = 4.05001e-09, y0 = 1.65
 
    From the above values , cell fall delay = 0.0043 ns
