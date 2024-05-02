@@ -650,6 +650,15 @@ From the plot that we got from ngspice, we need to characterize four parameters 
   ![Screenshot from 2024-05-02 15-16-02](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/dd47ceb4-4e8f-48db-a3c2-dd5fe5b88165)
 
 
+  Now, select an area in the gui and guide the pointer on to the metal 3 layer and press P. The selected region will be filled with metal 3. Now in tkcon terminal type the command **`cif see VIA2`** , The metal 3 filled area will be filled VIA2 mask.
+
+  ![Screenshot from 2024-05-02 15-44-45](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/644585de-de5d-412e-ac95-a16ad73e0d94)
+
+
+
+  
+
+
   
 
 
