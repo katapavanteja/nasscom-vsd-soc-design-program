@@ -35,6 +35,8 @@
    - [Sky130 Tech File Labs](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#sky130-tech-file-labs)
       - [Lab Steps to create final SPICE deck using Sky130tech](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-steps-to-create-final-spice-deck-using-sky130tech)
       - [Lab Steps to characterize the Inverter using sky130 model files](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-steps-to-characterize-the-inverter-using-sky130-model-files)
+      - [Lab Introduction to Sky130 pdk's and steps to download labs](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-introduction-to-sky130-pdks-and-steps-to-download-labs)
+      - [Lab Introduction to Magic and steps to load Sky130 tech-rules](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-introduction-to-magic-and-steps-to-load-sky130-tech-rules)
 
 
 
@@ -619,7 +621,41 @@ From the plot that we got from ngspice, we need to characterize four parameters 
 
   We have succesfully characterized the Inverter, now we should create a LEF file.
 
+
+
+  ### Lab Introduction to Sky130 pdk's and steps to download labs
+
   
+  To download the lab files, being in the home directory use the command
+
+  **`wget http://opencircuitdesign.com/open_pdks/archive/drc_tests.tgz`**
+
+  Now you have downloaded the zip file. To extract the labs from the zip file use the command
+
+  **`tar xfz drc_tests.tgz`**
+
+  In the downloaded files , **`.magicrc`** file serves as the start-up script for MAGIC.
+
+  ![Screenshot from 2024-05-02 14-46-09](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/5ff1b106-2271-4497-b7ec-07fd1bb3bd34)
+
+  ![Screenshot from 2024-05-02 15-07-12](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/27f975da-cdff-4964-b65a-95699b11b791)
+
+
+
+  ### Lab Introduction to Magic and steps to load Sky130 tech-rules
+
+
+  Use the command **`magic -d XR`** to open the Magic tool
+
+  ![Screenshot from 2024-05-02 15-16-02](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/dd47ceb4-4e8f-48db-a3c2-dd5fe5b88165)
+
+
+  
+
+
+
+  
+
 
 
 
