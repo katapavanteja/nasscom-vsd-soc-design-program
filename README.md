@@ -37,6 +37,7 @@
       - [Lab Steps to characterize the Inverter using sky130 model files](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-steps-to-characterize-the-inverter-using-sky130-model-files)
       - [Lab Introduction to Sky130 pdk's and steps to download labs](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-introduction-to-sky130-pdks-and-steps-to-download-labs)
       - [Lab Introduction to Magic and steps to load Sky130 tech-rules](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-introduction-to-magic-and-steps-to-load-sky130-tech-rules)
+      - [Lab exercise to fix Poly-9 error in Sky130 tech file](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-exercise-to-fix-poly-9-error-in-sky130-tech-file)
 
 
 
@@ -656,7 +657,10 @@ From the plot that we got from ngspice, we need to characterize four parameters 
 
 
 
-  
+ ### Lab exercise to fix Poly-9 error in Sky130 tech file
+
+
+ 
 
 
   
