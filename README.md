@@ -33,7 +33,10 @@
    - [Inception of Layout and CMOS fabrication process](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#inception-of-layout-and-cmos-fabrication-process)
       - [Lab steps to create std cell layout and extract spice netlist](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-steps-to-create-std-cell-layout-and-extract-spice-netlist)
    - [Sky130 Tech File Labs](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#sky130-tech-file-labs)
-      - [
+      - [Lab Steps to create final SPICE deck using Sky130tech](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-steps-to-create-final-spice-deck-using-sky130tech)
+      - [Lab Steps to characterize the Inverter using sky130 model files](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-steps-to-characterize-the-inverter-using-sky130-model-files)
+
+
 
 # Inception of open-source EDA, OpenLANE and Sky130 PDK
 ##  How to talk to computers
@@ -541,17 +544,79 @@ We need to extract the spice netlist from the given Inverter from MAGIC Tool ino
 
 First we need to create an extraction file of the inverter. we can do this by using the command **`extract all`** in the tkcon window. This will create an extracted file in the vsdstdcelldesign directory.
 
-
+![extracted](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/5044221d-1571-4f26-938f-61d2e3aeceab)
 
 Next we need to create a spice file using this extracted file to use within the ngspice tool.For this the command will be
 
 **`ext2spice cthresh 0 rthresh 0`**, this will not create any new file. 
 
+![tkcon](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/4e4a6585-a209-4a4d-9ab6-ac933d074d77)
+
 After that use command **`ext2spice`** , this will create a spice file in the vsdstdcelldesign directory.
+
+![spice](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/0a8ba608-df8d-412d-9b32-09d2d9d6b24a)
+
+![spice_file](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/37c0bd40-8f32-4f2f-a709-65811dccd312)
+
 
 
 
 ## Sky130 Tech File Labs
+
+
+### Lab Steps to create final SPICE deck using Sky130tech
+
+
+After extracting the SPICE file, we need to update it according to the design.
+
+![Screenshot from 2024-05-02 11-36-21](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/476c1e09-654f-4853-942f-b30616fb74f8)
+
+After that we need to run the SPICE file in the ngspice tool by using the command  **`ngspice sky130_inv.spice`**
+
+![Screenshot from 2024-05-02 11-38-19](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/9fcf36ae-e6dd-46f3-8204-c4249a38ed22)
+
+Now we need to verify the plot of output vs time, we need to use the command  **`plot y vs time a`**
+
+![Screenshot from 2024-05-02 11-49-54](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/bf215ce3-1c35-406a-b93e-baedbfbd2def)
+
+
+
+### Lab Steps to characterize the Inverter using sky130 model files
+
+
+From the plot that we got from ngspice, we need to characterize four parameters of the Inverter.
+
+- **Rise time** : It is the time taken for the output waveform to go to 80% of its max value from 20% of its max value.
+
+  x0 = 6.16138e-09, y0 = 0.660007
+  x0 = 6.20366e-09, y0 = 2.64009
+
+  From the above values, Rise time = 0.0422 ns
+
+- **Fall time** : It is the time taken for the output to fall from 80% of its max value to 20% of its max value.
+
+  x0 = 8.04034e-09, y0 = 2.64003
+  x0 = 8.06818e-09, y0 = 0.659993
+
+    From the above values , Fall Time = 0.0278 ns
+
+- **Propogation Delay** : It is the time taken for the 50% of transition from 0 to 1 at the output for the 50% transistion from 1 to 0 at the input side.
+
+  x0 = 2.18449e-09, y0 = 1.64994
+  x0 = 2.15e-09, y0 = 1.65011
+     From the above values , Prop Delay = 0.034 ns
+
+- **Cell Fall Delay** : It is the time taken for the 50% of transition from 1 to 0 at the output for the 50% transistion from 0 to 1 at the input side.
+
+  x0 = 4.05432e-09, y0 = 1.65
+  x0 = 4.05001e-09, y0 = 1.65
+
+   From the above values , cell fall delay = 0.0043 ns
+
+  We have succesfully characterized the Inverter, now we should create a LEF file.
+
+  
+
 
 
 
