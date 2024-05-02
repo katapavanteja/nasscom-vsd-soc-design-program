@@ -664,29 +664,54 @@ From the plot that we got from ngspice, we need to characterize four parameters 
 
  Now, lets work on the poly.9 file. Load it into the magic tool by using the command **`load poly.mag`**  in tkcon terminal.
 
+![Screenshot from 2024-05-02 23-54-49](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/be29d16e-1f2a-4271-909c-0ae05afa63a9)
+
 
  Check for the spacing between Poly resistor and poly in the layout and compare it with the actual value in the Skywater website. In the image below we can clearly see the error in spacing 
  between them. So now lets resolve it
 
+![Screenshot from 2024-05-03 00-00-55](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/fbd1f1be-aa19-4b33-84fb-212b324fb471)
 
- 
 
 ![Screenshot 2024-05-03 003013](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/7ed03823-bd72-4f6b-a40b-79839afc77c8)
 
 
 Open the Sky130a.tech file, which is in the drc_tests directory and check for poly.9 keyword and make the changes that are shown in the images below and save it.
 
+![Screenshot from 2024-05-03 00-12-48](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/5cd46200-35d0-4ed9-9737-1d1b9c01c5fb)
 
-
-
+![Screenshot from 2024-05-03 00-17-50](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/64791bb7-7edc-4901-83d7-6d1c16745747)
 
  Now again load the tech file by using the command **`tech load sky130A.tech`** , and again check drc by using command **`drc check`** in the tkcon terminal.
 
+![Screenshot from 2024-05-03 00-20-00](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/1cc3741e-e424-466d-b74a-ae7d24b9be1b)
 
 
 
 ### Lab exercise to implement poly resistor spacing to diff and tap
  
+
+Now load nwell.mag file into the magic and check for violations.
+
+![Screenshot from 2024-05-03 01-45-28](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/7ac6a97a-1ac4-4572-924c-fd4389de7862)
+
+In the above layout we have some violations, Open tech file and make changes as shown
+
+![Screenshot from 2024-05-03 01-32-47](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/1ac46750-2e45-45d1-b9df-0099222e9e19)
+
+
+![Screenshot from 2024-05-03 01-36-45](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/cb7f2348-0880-4012-a6f4-fe26663efefc)
+
+
+
+###
+After updating the tech file load it again and check for errors
+
+![Screenshot from 2024-05-03 01-44-19](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/f0a0fda2-7cda-4bd9-aee6-542aa47c7a41)
+
+Now after tapping the nwell violations are resolved.
+
+
 
 
 
