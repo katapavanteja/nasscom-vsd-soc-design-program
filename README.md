@@ -38,10 +38,9 @@
       - [Lab Introduction to Sky130 pdk's and steps to download labs](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-introduction-to-sky130-pdks-and-steps-to-download-labs)
       - [Lab Introduction to Magic and steps to load Sky130 tech-rules](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-introduction-to-magic-and-steps-to-load-sky130-tech-rules)
       - [Lab exercise to fix Poly-9 error in Sky130 tech file](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-exercise-to-fix-poly-9-error-in-sky130-tech-file)
-      - [Lab exercise to implement poly resistor spacing to diff and tap](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-exercise-to-implement-poly-resistor-spacing-to-diff-and-tap)
+      - [Lab challenge exercise to describe DRC error as geometrical construct](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-challenge-exercise-to-describe-drc-error-as-geometrical-construct)
+      - [Lab challenge to find missing or Incorrect rules and fix them](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-challenge-to-find-missing-or-incorrect-rules-and-fix-them)
  
-
-
 
 # Inception of open-source EDA, OpenLANE and Sky130 PDK
 ##  How to talk to computers
@@ -688,10 +687,12 @@ Open the Sky130a.tech file, which is in the drc_tests directory and check for po
 
 
 
-### Lab exercise to implement poly resistor spacing to diff and tap
+### Lab challenge exercise to describe DRC error as geometrical construct
  
 
 Now load nwell.mag file into the magic and check for violations.
+
+![Screenshot 2024-05-03 012127](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/950b4a6a-dcaf-4e57-bf12-e6bda2ff602a)
 
 ![Screenshot from 2024-05-03 01-45-28](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/7ac6a97a-1ac4-4572-924c-fd4389de7862)
 
@@ -704,7 +705,9 @@ In the above layout we have some violations, Open tech file and make changes as 
 
 
 
-###
+### Lab challenge to find missing or Incorrect rules and fix them
+
+
 After updating the tech file load it again and check for errors
 
 ![Screenshot from 2024-05-03 01-44-19](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/f0a0fda2-7cda-4bd9-aee6-542aa47c7a41)
