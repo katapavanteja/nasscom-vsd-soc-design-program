@@ -38,6 +38,8 @@
       - [Lab Introduction to Sky130 pdk's and steps to download labs](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-introduction-to-sky130-pdks-and-steps-to-download-labs)
       - [Lab Introduction to Magic and steps to load Sky130 tech-rules](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-introduction-to-magic-and-steps-to-load-sky130-tech-rules)
       - [Lab exercise to fix Poly-9 error in Sky130 tech file](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-exercise-to-fix-poly-9-error-in-sky130-tech-file)
+      - [Lab exercise to implement poly resistor spacing to diff and tap](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-exercise-to-implement-poly-resistor-spacing-to-diff-and-tap)
+ 
 
 
 
@@ -658,6 +660,37 @@ From the plot that we got from ngspice, we need to characterize four parameters 
 
 
  ### Lab exercise to fix Poly-9 error in Sky130 tech file
+
+
+ Now, lets work on the poly.9 file. Load it into the magic tool by using the command **`load poly.mag`**  in tkcon terminal.
+
+
+ Check for the spacing between Poly resistor and poly in the layout and compare it with the actual value in the Skywater website. In the image below we can clearly see the error in spacing 
+ between them. So now lets resolve it
+
+
+ 
+
+![Screenshot 2024-05-03 003013](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/7ed03823-bd72-4f6b-a40b-79839afc77c8)
+
+
+Open the Sky130a.tech file, which is in the drc_tests directory and check for poly.9 keyword and make the changes that are shown in the images below and save it.
+
+
+
+
+
+ Now again load the tech file by using the command **`tech load sky130A.tech`** , and again check drc by using command **`drc check`** in the tkcon terminal.
+
+
+
+
+### Lab exercise to implement poly resistor spacing to diff and tap
+ 
+
+
+
+ 
 
 
  
