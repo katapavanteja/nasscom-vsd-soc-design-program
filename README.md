@@ -44,6 +44,7 @@
    - [Timing modelling using delay tables](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#timing-modelling-using-delay-tables)
       - [Lab steps to convert grid info to track info](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-steps-to-convert-grid-info-to-track-info)
       - [Lab steps to convert magic layout to standard cell LEF](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-steps-to-convert-magic-layout-to-standard-cell-lef)
+      - [Introduction to timing libs and steps to include new cell in synthesis](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#introduction-to-timing-libs-and-steps-to-include-new-cell-in-synthesis)
 
  
 
@@ -770,10 +771,27 @@ Now in the tkcon terminal use the command **`lef write`** in order to create a L
 ![Screenshot from 2024-05-03 15-15-52](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/85905d3c-ccdc-4f3a-ad3c-ccda8672cb70)
 
  
+### Introduction to timing libs and steps to include new cell in synthesis
 
+
+To proceed futher lets keep all the required files at single place thet is in src directory. First copy the extracted LEF file into src directory.
+
+After LEF file we need to copy the required libraries, here we will have different types of libraries such as fast , slow, typical etc.. , we need to copy all those .lib files to src directory by using **`cp`** command.
 
   
+Now we need to make some changes in the .config file as shown in the image
 
+
+After that we need to open bash using command **`docker`** being in openlane directory. And enter into the open lane and prepare the design as shown in figure. Once preparation is complete we need to use following commands 
+
+**``**
+
+**``**
+
+And now again use the command **`run_synthesis`** and check whether it maps our custom vsdinverter or not.
+
+
+From the above figure we can see that synthesis was succesful and also we have 1554 instances of our vsdinverter. So this stage is successful.
 
 
   
