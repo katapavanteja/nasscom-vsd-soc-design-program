@@ -45,6 +45,7 @@
       - [Lab steps to convert grid info to track info](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-steps-to-convert-grid-info-to-track-info)
       - [Lab steps to convert magic layout to standard cell LEF](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-steps-to-convert-magic-layout-to-standard-cell-lef)
       - [Introduction to timing libs and steps to include new cell in synthesis](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#introduction-to-timing-libs-and-steps-to-include-new-cell-in-synthesis)
+      - [Lab steps to configure synthesis settings to fix slack and include vsdinv](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-steps-to-configure-synthesis-settings-to-fix-slack-and-include-vsdinv)
 
  
 
@@ -800,11 +801,37 @@ From the above figure we can see that synthesis was succesful and also we have 1
 
 
 
+### Lab steps to configure synthesis settings to fix slack and include vsdinv
 
 
-  
+ As we completed with synthesis stage, now we need to perform floorplan by using the following commands
+
+ **`init_floorplan`**
+
+ **`place_io`**
+
+ **`tap_decap_or`**
 
 
+
+ Now as we done with Floorplan stage, we can proceed to placement stage by using the command **`run_placement`**
+
+
+ Now after the placement is done,lets check whether the cell that we have created is placed in the design. For this being in the placement directory we should use the command
+
+ **`magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def &`**
+
+
+
+
+
+ Clearly we can see that the cell that we have created " sky130_vsdinv" is placed in the design and now lets check whether it is alligned correctly with other cells or not by using the command **`expand`** in the tkcon terminal.
+
+
+
+ Yes,Its perfectly alligned!
+
+ 
 
 
 
