@@ -40,6 +40,10 @@
       - [Lab exercise to fix Poly-9 error in Sky130 tech file](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-exercise-to-fix-poly-9-error-in-sky130-tech-file)
       - [Lab challenge exercise to describe DRC error as geometrical construct](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-challenge-exercise-to-describe-drc-error-as-geometrical-construct)
       - [Lab challenge to find missing or Incorrect rules and fix them](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-challenge-to-find-missing-or-incorrect-rules-and-fix-them)
+4) Day-4: [Pre-layout timing analysis and importance of good clock tree](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#pre-layout-timing-analysis-and-importance-of-good-clock-tree)
+   - [Timing modelling using delay tables](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#timing-modelling-using-delay-tables)
+      - [Lab steps to convert grid info to track info](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-steps-to-convert-grid-info-to-track-info)
+
  
 
 # Inception of open-source EDA, OpenLANE and Sky130 PDK
@@ -716,6 +720,11 @@ Now after tapping the nwell violations are resolved.
 
 
 
+# Pre-layout timing analysis and importance of good clock tree
+
+## Timing modelling using delay tables
+
+### Lab steps to convert grid info to track info
 
 
  
