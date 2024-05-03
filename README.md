@@ -735,14 +735,17 @@ Now after tapping the nwell violations are resolved.
 
  Open the tracks.info file to know more about tracks
 
+ ![Screenshot from 2024-05-03 14-25-47](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/c2dfc964-c417-409b-a3c4-6f799d31741e)
 
  In the cell design input and output ports are on the li1 layer.We need to convert the grid into tracks.
 
  Open the tkcon window and give the command for grid according to the track file.
 
+![Screenshot from 2024-05-03 14-41-05](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/3e6c78c1-4883-4858-8332-3cb6d451dfbb)
 
  Now we can see that both input and output ports are placed at the intersection of the tracks. Here our second condition also satisfies as 3 boxes are covered between the boundaries.
 
+![Screenshot from 2024-05-03 14-43-07](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/11ac8a4d-9e0f-40fa-9b70-d07415a46ca2)
 
 
 
