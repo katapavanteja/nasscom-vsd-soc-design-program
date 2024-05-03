@@ -755,15 +755,19 @@ Now after tapping the nwell violations are resolved.
 
 Now we need to extract the LEF file.First save .mag file by using the command **`save sky130_vsdinv.mag`** in the tkcon terminal.
 
+![Screenshot from 2024-05-03 15-06-12](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/773a41d2-5c04-4481-bd6c-0342d686e21f)
 
 Now open the saved .mag file using the command **`magic -T sky130A.tch sky130_vsdinv.mag &`**
 
+![Screenshot from 2024-05-03 15-10-20](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/1b3829cf-0f5b-4bfc-bc41-089e1014f306)
 
 Now in the tkcon terminal use the command **`lef write`** in order to create a LEF file.
 
+![Screenshot from 2024-05-03 15-12-34](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/eebf9888-d9fa-4d53-a91c-d3998b1faaef)
 
  Now we can open the LEF file and go through it.
 
+![Screenshot from 2024-05-03 15-15-52](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/85905d3c-ccdc-4f3a-ad3c-ccda8672cb70)
 
  
 
