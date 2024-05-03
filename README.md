@@ -778,20 +778,28 @@ To proceed futher lets keep all the required files at single place thet is in sr
 
 After LEF file we need to copy the required libraries, here we will have different types of libraries such as fast , slow, typical etc.. , we need to copy all those .lib files to src directory by using **`cp`** command.
 
-  
+  ![Screenshot from 2024-05-03 15-40-24](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/d5eda7fb-d80f-4ae2-b393-b5d3807c44d2)
+
 Now we need to make some changes in the .config file as shown in the image
 
+![Screenshot from 2024-05-03 16-01-12](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/635dbe20-014c-4eb8-a798-5c360be1f282)
 
 After that we need to open bash using command **`docker`** being in openlane directory. And enter into the open lane and prepare the design as shown in figure. Once preparation is complete we need to use following commands 
 
-**``**
+**`set lefs [glob $::env(DESIGN_DIR)/src/*.lef]`**
 
-**``**
+**`add_lefs -src $lefs`**
+
+![Screenshot from 2024-05-03 16-22-21](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/ae8f5081-bccd-4e13-a4c4-ebb9704e8d83)
 
 And now again use the command **`run_synthesis`** and check whether it maps our custom vsdinverter or not.
 
+![Screenshot from 2024-05-03 16-28-45](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/34d10bf0-9d1c-4795-af34-c74ebfc6a03f)
 
 From the above figure we can see that synthesis was succesful and also we have 1554 instances of our vsdinverter. So this stage is successful.
+
+
+
 
 
   
