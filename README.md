@@ -727,6 +727,25 @@ Now after tapping the nwell violations are resolved.
 ### Lab steps to convert grid info to track info
 
 
+ Now to proceed further we will be needing LEF file of the Inverter cell. we need to extract if from the current Inverter cell.
+
+ From PNR point of view, while designing standard cell set two things must be considered
+ - The Input and output ports must lie on the intersection of the Vertical and Horizontal tracks.
+ - The width of the standard cell should be an odd multiple of the track pitch and height should be an odd multiple of track vertical pitch.
+
+ Open the tracks.info file to know more about tracks
+
+
+ In the cell design input and output ports are on the li1 layer.We need to convert the grid into tracks.
+
+ Open the tkcon window and give the command for grid according to the track file.
+
+
+ Now we can see that both input and output ports are placed at the intersection of the tracks. Here our second condition also satisfies as 3 boxes are covered between the boundaries.
+
+
+
+
  
 
 
