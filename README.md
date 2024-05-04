@@ -48,6 +48,8 @@
       - [Lab steps to configure synthesis settings to fix slack and include vsdinv](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-steps-to-configure-synthesis-settings-to-fix-slack-and-include-vsdinv)
    - [Timing analysis with ideal clocks using openSTA](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#timing-analysis-with-ideal-clocks-using-opensta)
       - [Lab steps to configure OpenSTA for post-synth timing analysis](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-steps-to-configure-opensta-for-post-synth-timing-analysis)
+   - [Clock tree synthesis TritonCTS and signal integrity](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#clock-tree-synthesis-tritoncts-and-signal-integrity)
+      - [Lab steps to run CTS using TritonCTS](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-steps-to-run-cts-using-tritoncts)
 
 
  
@@ -861,6 +863,29 @@ We can say that STA is succesful when the slack that we will get equals to that 
 ![sta_done](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/e8f90b9c-848f-49e5-bd7b-a7a78a0f48fe)
 
 As we can see that Slack is equal to of that we got in synthesis stage. So STA is succesful.
+
+
+
+## Clock tree synthesis TritonCTS and signal integrity
+
+
+### Lab steps to run CTS using TritonCTS
+
+
+After improving the timing of the design, the previous design should be replaced with improved design by using the command
+
+**`write_verilog //path of the previous design//`**
+
+Now the design will get updated with the improved version.
+
+Now we can start working on it, starting with Floorplan by using the same commands that were used before. After succesful completion of Floorplan we should do placement by using the command **`run_placement`**.
+
+
+
+After placement is done, we can proceed with cts stage. To perform CTS we should use the command **`run_cts`**.
+
+
+After completion of the cts we can observe that in the synthesis results directory a new **.cts** file is added. The newly added CTS file contains both the previous netlist and also the clock buffers that were added during the cts stage.
 
 
 
