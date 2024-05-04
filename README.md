@@ -46,6 +46,9 @@
       - [Lab steps to convert magic layout to standard cell LEF](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-steps-to-convert-magic-layout-to-standard-cell-lef)
       - [Introduction to timing libs and steps to include new cell in synthesis](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#introduction-to-timing-libs-and-steps-to-include-new-cell-in-synthesis)
       - [Lab steps to configure synthesis settings to fix slack and include vsdinv](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-steps-to-configure-synthesis-settings-to-fix-slack-and-include-vsdinv)
+   - [Timing analysis with ideal clocks using openSTA](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#timing-analysis-with-ideal-clocks-using-opensta)
+      - [Lab steps to configure OpenSTA for post-synth timing analysis](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-steps-to-configure-opensta-for-post-synth-timing-analysis)
+
 
  
 
@@ -832,6 +835,28 @@ From the above figure we can see that synthesis was succesful and also we have 1
 ![Screenshot from 2024-05-03 23-06-49](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/0117d6f3-7935-4e30-84c6-5f97865d5b89)
 
  Yes,Its perfectly alligned!
+
+
+
+ ## Timing analysis with ideal clocks using openSTA
+
+
+ ### Lab steps to configure OpenSTA for post-synth timing analysis
+
+
+Next step is to perform STA on the design. For this first we need to complete the synthesis stage. After synthesis is done some steps need to be followed.
+
+First, we need to create a new file **`pre_sta.conf`** in the openlane directory.
+
+
+After that we need to create another file called **`my_base.sdc`** in the src directory which is picorv32a directory.
+
+
+
+
+
+
+ 
 
  
 
