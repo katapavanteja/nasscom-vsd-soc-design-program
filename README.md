@@ -880,13 +880,15 @@ Now the design will get updated with the improved version.
 
 Now we can start working on it, starting with Floorplan by using the same commands that were used before. After succesful completion of Floorplan we should do placement by using the command **`run_placement`**.
 
-
+![placement_done](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/b2bc9249-6c30-4ea1-a953-e102ec8c77f1)
 
 After placement is done, we can proceed with cts stage. To perform CTS we should use the command **`run_cts`**.
 
+![cts_done](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/a022b59d-6f48-4806-8b35-97626c8bf5bf)
 
 After completion of the cts we can observe that in the synthesis results directory a new **.cts** file is added. The newly added CTS file contains both the previous netlist and also the clock buffers that were added during the cts stage.
 
+![cts v _file](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/b21c6b13-f78f-45c9-a2dd-57c6f06cf0e8)
 
 
 
