@@ -848,8 +848,19 @@ Next step is to perform STA on the design. For this first we need to complete th
 
 First, we need to create a new file **`pre_sta.conf`** in the openlane directory.
 
+![pre_sta conf](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/7847af0f-d514-4277-b0db-fcc622cc3646)
 
 After that we need to create another file called **`my_base.sdc`** in the src directory which is picorv32a directory.
+
+![my_base sdc](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/0df33cc7-db83-4611-88df-e9cb2e0d196c)
+
+Now we need to use the command **`sta pre_sta.conf`** being in the openlane directory.
+
+We can say that STA is succesful when the slack that we will get equals to that of synthesis stage.
+
+![sta_done](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/e8f90b9c-848f-49e5-bd7b-a7a78a0f48fe)
+
+As we can see that Slack is equal to of that we got in synthesis stage. So STA is succesful.
 
 
 
