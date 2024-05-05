@@ -50,6 +50,8 @@
       - [Lab steps to configure OpenSTA for post-synth timing analysis](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-steps-to-configure-opensta-for-post-synth-timing-analysis)
    - [Clock tree synthesis TritonCTS and signal integrity](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#clock-tree-synthesis-tritoncts-and-signal-integrity)
       - [Lab steps to run CTS using TritonCTS](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-steps-to-run-cts-using-tritoncts)
+   - [Timing analysis with real clocks using openSTA](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#timing-analysis-with-real-clocks-using-opensta)
+      - [Lab steps to analyze timing with real clocks using OpenSTA](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-steps-to-analyze-timing-with-real-clocks-using-opensta)
 
 
  
