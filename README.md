@@ -918,9 +918,15 @@ After completion of the cts we can observe that in the synthesis results directo
  **`set_propagated_clock [all_clocks]`**
 
 **`report_checks -path_delay min_max -format full_clock_expanded -digits 4`**
- 
+
+![steps_to_db](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/b2490265-5cce-4c54-a1a5-e04d928df9f0)
+
+![db_created](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/d4b47d98-eef0-4e16-8845-4196fb1eb75b)
+
+
 After all these steps the db will get created and by using the last command we will get a timing report too.
 
+![db_done](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/03755c81-1025-4938-8176-a493c63881f5)
 
 
 
