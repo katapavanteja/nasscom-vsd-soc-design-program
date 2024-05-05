@@ -891,12 +891,35 @@ After completion of the cts we can observe that in the synthesis results directo
 ![cts v _file](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/b21c6b13-f78f-45c9-a2dd-57c6f06cf0e8)
 
 
+## Timing analysis with real clocks using openSTA
 
 
+### Lab steps to analyze timing with real clocks using OpenSTA
 
+
+ To create a database in the openroad, first we need to enter into the openroad by using the command **`openroad`**.
+
+ After that we need to follow the following list of commands in the openroad
+
+ **`read_lef /openLANE_flow/designs/picorv32a/runs/04-05_21-50/tmp/merged.lef`**
+
+ **`read_def /openLANE_flow/designs/picorv32a/runs/04-05_21-50/results/cts/picorv32a.cts.def`**
+
+ **`write_db pico_cts.db`**
+
+ **`read_db pico_cts.db`**
+
+ **`read_verilog /openLANE_flow/designs/picorv32a/runs/04-05_21-50/results/synthesis/picorv32a.synthesis_cts.v`**
+
+ **`read_liberty $::env(LIB_SYNTH_COMPLETE)`**
+
+ **`read_sdc /openLANE_flow/designs/picorv32a/src/my_base.sdc`**
+
+ **`set_propagated_clock [all_clocks]`**
+
+**`report_checks -path_delay min_max -format full_clock_expanded -digits 4`**
  
-
- 
+After all these steps the db will get created and by using the last command we will get a timing report too.
 
 
 
