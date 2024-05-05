@@ -991,6 +991,13 @@ We need to follow the similar steps that we have followed earlier in the openroa
 
 **`report_clock_skew -setup`**
 
+![Screenshot from 2024-05-05 06-23-26](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/10e89ad9-f9fd-4646-bf3a-b04e98980485)
+
+
+![Screenshot from 2024-05-05 06-17-10](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/beee43d7-b727-41ad-b57e-c34c3879c155)
+
+
+
 
 
 
