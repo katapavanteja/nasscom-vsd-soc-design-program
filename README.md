@@ -52,6 +52,8 @@
       - [Lab steps to run CTS using TritonCTS](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-steps-to-run-cts-using-tritoncts)
    - [Timing analysis with real clocks using openSTA](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#timing-analysis-with-real-clocks-using-opensta)
       - [Lab steps to analyze timing with real clocks using OpenSTA](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-steps-to-analyze-timing-with-real-clocks-using-opensta)
+      - [Lab steps to execute OpenSTA with right timing libraries and CTS assignment](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-steps-to-execute-opensta-with-right-timing-libraries-and-cts-assignment)
+      - [Lab steps to observe impact of bigger CTS buffers on setup and hold timing](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-steps-to-observe-impact-of-bigger-cts-buffers-on-setup-and-hold-timing)
 
 
  
@@ -931,22 +933,63 @@ After all these steps the db will get created and by using the last command we w
 ![db_done](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/03755c81-1025-4938-8176-a493c63881f5)
 
 
+### Lab steps to execute OpenSTA with right timing libraries and CTS assignment
+
+
+To remove sky130_fd_sc_hd__clkbuf_1 from the list
+
+**`set ::env(CTS_CLK_BUFFER_LIST) [lreplace $::env(CTS_CLK_BUFFER_LIST) 0 0]`**
+
+To check the current value of CTS_CLK_BUFFER_LIST
+
+**`echo $::env(CTS_CLK_BUFFER_LIST)`**
+
+To check the current value of CURRENT_DEF
+
+**`echo $::env(CURRENT_DEF)`**
+
+To set def as placement def
+
+**`set ::env(CURRENT_DEF) /openLANE_flow/designs/picorv32a/runs/04-05_21-50/results/placement/picorv32a.placement.def`**
+
+To run cts
+
+**`run_cts`**
+
+To check the current value of CTS_CLK_BUFFER_LIST
+
+**`echo $::env(CTS_CLK_BUFFER_LIST)`**
 
 
 
+### Lab steps to observe impact of bigger CTS buffers on setup and hold timing
 
 
+We need to follow the similar steps that we have followed earlier in the openroad.
 
+**`read_lef /openLANE_flow/designs/picorv32a/runs/04-05_21-50/tmp/merged.lef`**
 
+**`read_def /openLANE_flow/designs/picorv32a/runs/04-05_21-50/results/cts/picorv32a.cts.def`**
 
+**`write_db pico_cts1.db`**
 
+**`read_db pico_cts1.db`**
 
+**`read_verilog /openLANE_flow/designs/picorv32a/runs/04-05_21-50/results/synthesis/picorv32a.synthesis_cts.v`**
 
+**`read_liberty $::env(LIB_SYNTH_COMPLETE)`**
 
+**`link_design picorv32a`**
 
+**`read_sdc /openLANE_flow/designs/picorv32a/src/my_base.sdc`**
 
+**`set_propagated_clock [all_clocks]`**
 
+**`report_checks -path_delay min_max -fields {slew trans net cap input_pins} -format full_clock_expanded -digits 4`**
 
+**`report_clock_skew -hold`**
+
+**`report_clock_skew -setup`**
 
 
 
