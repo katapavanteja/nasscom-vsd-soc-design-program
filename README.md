@@ -1043,12 +1043,19 @@ In the above figure we can observe the path through which power is delivered all
 
 The Final stage in the flow is ROUTING. we can start routing by using the command **`run_routing`** .
 
+![routing_done](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/1e136428-7ac7-4eed-b71d-5b3d754f08b4)
+
+![no_violations](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/fcd6128c-86ba-4871-a904-0713a24f3c3b)
 
 From tha above figures we can see that routing is done and it is done with 0 violations, SO our routing is succesful but we can see the negative slack. We need to eliminate that negative slack for succesful completion of Physical design flow.
 
 We can see the final layout in gui using magic tool by using the command 
 
 **`magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/04-05_21-50/tmp/merged.lef def read /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/04-05_21-50/results/routing/picorv32a.def &`**
+
+
+![final_layout](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/6f8f6bcb-8d0f-45bb-a0c4-61ea2db92a15)
+
 
 
 
