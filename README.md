@@ -54,7 +54,9 @@
       - [Lab steps to analyze timing with real clocks using OpenSTA](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-steps-to-analyze-timing-with-real-clocks-using-opensta)
       - [Lab steps to execute OpenSTA with right timing libraries and CTS assignment](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-steps-to-execute-opensta-with-right-timing-libraries-and-cts-assignment)
       - [Lab steps to observe impact of bigger CTS buffers on setup and hold timing](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-steps-to-observe-impact-of-bigger-cts-buffers-on-setup-and-hold-timing)
-
+5) Day-5: [Final steps for RTL2GDS using tritonRoute and openSTA](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#final-steps-for-rtl2gds-using-tritonroute-and-opensta)
+   - [Power Distribution Network and routing](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#power-distribution-network-and-routing)
+      - [Lab steps to build power distribution network](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-steps-to-build-power-distribution-network)
 
  
 
@@ -998,13 +1000,22 @@ We need to follow the similar steps that we have followed earlier in the openroa
 
 
 
+# Final steps for RTL2GDS using tritonRoute and openSTA
 
 
+## Power Distribution Network and routing
 
 
+### Lab steps to build power distribution network
 
 
+After completion of CTS, now we need to lay down power distribution network(PDN) for the design and it is done by using the command **`gen_pdn`** .
 
+
+We can clearly see that "PDN generation was succesful".
+
+
+In the above figure we can see that the pitch of the standard cell rails is 2.720, which we have expected.
 
 
 
