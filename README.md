@@ -1047,7 +1047,7 @@ The Final stage in the flow is ROUTING. we can start routing by using the comman
 
 ![no_violations](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/fcd6128c-86ba-4871-a904-0713a24f3c3b)
 
-From tha above figures we can see that routing is done and it is done with 0 violations, SO our routing is succesful but we can see the negative slack. We need to eliminate that negative slack for succesful completion of Physical design flow.
+From tha above figures we can see that routing is done and it is done with 0 violations, So our routing is succesful but we can see the negative slack. We need to eliminate that negative slack for succesful completion of Physical design flow.
 
 We can see the final layout in gui using magic tool by using the command 
 
