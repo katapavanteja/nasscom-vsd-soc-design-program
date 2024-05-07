@@ -1011,9 +1011,13 @@ We need to follow the similar steps that we have followed earlier in the openroa
 
 After completion of CTS, now we need to lay down power distribution network(PDN) for the design and it is done by using the command **`gen_pdn`** .
 
+![gen_pdn_command](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/5ce794df-a8a4-4d8c-a687-103a247b6b09)
+
+![pdn_done](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/2e684127-62a7-4e3f-938f-14ce6b0570ad)
 
 We can clearly see that "PDN generation was succesful".
 
+![rails straps_info](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/4a2d278c-849e-4fb1-b906-d297b12c7401)
 
 In the above figure we can see that the pitch of the standard cell rails is 2.720, which we have expected.
 
