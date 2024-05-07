@@ -59,6 +59,7 @@
       - [Lab steps to build power distribution network](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/blob/main/README.md#lab-steps-to-build-power-distribution-network)
       - [Lab steps from power straps to std cell power](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/blob/main/README.md#lab-steps-from-power-straps-to-std-cell-power)
       - [Basics of global and detail routing and configure TritonRoute](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/blob/main/README.md#basics-of-global-and-detail-routing-and-configure-tritonroute)
+* [References](
 
  
 
@@ -1060,7 +1061,10 @@ We can see the final layout in gui using magic tool by using the command
 
 ## References
 
-
+* https://github.com/nickson-jose/vsdstdcelldesign
+* https://github.com/google/skywater-pdk
+* https://github.com
+* Material provided in workshop
 
 
  
