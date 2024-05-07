@@ -57,6 +57,8 @@
 5) Day-5: [Final steps for RTL2GDS using tritonRoute and openSTA](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#final-steps-for-rtl2gds-using-tritonroute-and-opensta)
    - [Power Distribution Network and routing](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#power-distribution-network-and-routing)
       - [Lab steps to build power distribution network](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-steps-to-build-power-distribution-network)
+      - [Lab steps from power straps to std cell power](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#lab-steps-from-power-straps-to-std-cell-power)
+      - [Basics of global and detail routing and configure TritonRoute](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/edit/main/README.md#basics-of-global-and-detail-routing-and-configure-tritonroute)
 
  
 
@@ -1022,9 +1024,34 @@ We can clearly see that "PDN generation was succesful".
 In the above figure we can see that the pitch of the standard cell rails is 2.720, which we have expected.
 
 
+### Lab steps from power straps to std cell power
+
+![Screenshot 2024-05-07 104244](https://github.com/katapavanteja/nasscom-vsd-soc-design-program/assets/168015988/9cecd9c1-5a25-4a26-851d-11f6ce4fbc49)
+
+In the above figure we can observe the path through which power is delivered all the way to standard cells.
+
+- The blocks that we can observe around the design are I/o pads and those with Red and Blue colours are Power Pads. Red pad is for power and the Blue one is for Gnd.
+- Those blocks are connected to Power and Gnd Rings, which go around the design and supply power to straps.
+- The vertical connections that we can observe for the rings are called Power Straps.
+- From Power straps and Rings connections will be made to the Power rails. The standard cell will be placed in between these power rails. The height of the standard cells should be the multiples of the pitch of the rails in order to get power and gnd supplies accurately.
+
+  This is the overview of the PDN structure.
 
 
+### Basics of global and detail routing and configure TritonRoute
   
+
+The Final stage in the flow is ROUTING. we can start routing by using the command **`run_routing`** .
+
+
+From tha above figures we can see that routing is done and it is done with 0 violations, SO our routing is succesful but we can see the negative slack. We need to eliminate that negative slack for succesful completion of Physical design flow.
+
+We can see the final layout in gui using magic tool by using the command 
+
+**`magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/04-05_21-50/tmp/merged.lef def read /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/04-05_21-50/results/routing/picorv32a.def &`**
+
+
+
 
  
   
